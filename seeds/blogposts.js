@@ -19,5 +19,12 @@ Post.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
     }
 )
+module.exports = Post
