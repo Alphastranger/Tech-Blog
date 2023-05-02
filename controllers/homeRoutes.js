@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const sequelize = require('../config/connection')
 const {Post, User} = require ('../models')
 
 router.get('/', async (req, res)=>{
@@ -22,6 +23,27 @@ router.get('/', async (req, res)=>{
     } catch (err){
         res.status(500).json(err)
     }
+})
+router.get('/dashboard', async (req, res)=>{
+   try {
+    const dashBoard = await sequelize.query(`SELECT * FROM user INNER JOIN post WHERE post_id = user.id`)
+    // Post.findByPk(req.params.id,{
+    //     include:[{model: User,
+    //     attributes: ['id']}],
+        // where: {
+        //     post_id: user.id
+        // }
+    
+    // if(!req.session.logged_in) {
+    //     res.redirect('/login')
+    //     return
+    // }
+    const myPosts = dashBoard.map((post)=>
+        post.get({plain:true}))
+    res.render('dashboard', {myPosts})
+} catch (err){
+    res.status(500).json(err)
+}
 })
 router.get('/login', (req, res)=>{
     if (req.session.logged_in) {
