@@ -45,3 +45,25 @@ nav li:hover {
     left: 20px;
     justify-content: center;
 }
+.postForm {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#post {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    height: 100px;
+    width: 200px;
+    padding-bottom: 80px;
+}
+#submitbutton {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+}
+#title {
+    display: flex;
+    width: 200px;
+}

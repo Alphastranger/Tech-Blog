@@ -1,4 +1,17 @@
 <div class="postPage">
+    {{!-- {{#if loggedIn}} --}}
+    <div class="submission">
+    <form class="postForm">
+        <label for="post">Make a new post!</label><br>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="titlebox" size="50"><br>
+        <textarea id="post" name="postbox"></textarea>
+        <input type="submit" id= "submitbutton" value="submit">
+    </form>
+    </div>
+    {{!-- {{else}} --}}
+        {{!-- <h2>To leave a new blogpost, please log in!</h2>
+        {{/if}} --}}
     <section class="block">
         {{#each posts as |post|}}
         {{> post}}

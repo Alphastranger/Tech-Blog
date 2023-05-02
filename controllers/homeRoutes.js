@@ -5,16 +5,7 @@ const {Post, User} = require ('../models')
 router.get('/', async (req, res)=>{
     try {
         const homePage = await Post.findAll({
-            // include: [{model: User}],
-            // attributes: {
-            //     include: [
-            //         [
-            //             sequelize.literal(
-            //                 '(SELECT name From User WHERE Post_id = User.id'
-            //             )
-            //         ]
-            //     ]
-            // }
+            include: [{model: User}]
         })
         const posts = homePage.map((post)=>
         post.get({plain: true}))
