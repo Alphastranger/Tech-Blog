@@ -39,3 +39,9 @@ nav li:hover {
     display: flex;
     align-items: flex-end;
 }
+.login {
+    display: flex;
+    position: relative;
+    left: 20px;
+    justify-content: center;
+}
