@@ -1,0 +1,20 @@
+header {
+    background-color: black;
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline;
+}
+nav li:hover {
+    background-color: lightgreen;
+}
+header h1 {
+    display: inline;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    box-shadow: 4px 4px;
+}

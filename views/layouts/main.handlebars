@@ -8,5 +8,20 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <
+    <div class="main-page">
+        <div class="header">
+        <nav class="nav">
+            <ul>
+            <li><a href="/">Home</a></li>
+            {{#if loggedIn}}
+            <button id="logout">Logout</button>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            {{/if}}
+            </ul>
+        </nav>
+        <h1>The Tech Blog</h1>
+        </div>
+        {{{body}}}
+    </div>
 </body>
