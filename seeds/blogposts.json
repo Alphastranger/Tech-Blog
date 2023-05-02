@@ -1,0 +1,12 @@
+[
+    {
+    "title": "Blogpost 1",
+    "post_text": "Hello all, my first post!"
+    },{
+        "title": "Blogpost 2",
+        "post_text": "Hello all, I'm back!"
+        }, {
+            "title": "Blogpost 3",
+            "post_text": "Hello all, I give up."
+            }
+]
