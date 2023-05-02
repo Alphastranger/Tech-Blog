@@ -18,6 +18,12 @@ Post.init(
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
+        },  post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }
     },
     {
@@ -25,6 +31,7 @@ Post.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
+        modelName: 'post'
     }
 )
 module.exports = Post

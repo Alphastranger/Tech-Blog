@@ -17,4 +17,8 @@ header h1 {
     color: black;
     border-radius: 4px;
     box-shadow: 4px 4px;
+};
+block {
+    display: flex;
+    flex-direction: column;
 }
