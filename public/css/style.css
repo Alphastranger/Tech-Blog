@@ -1,7 +1,7 @@
 .mainPage {
-    background-color: white;
+    background-color: lightgreen;
 }
-header {
+.header {
     background-color: black;
     color: white;
     list-style-type: none;
@@ -14,14 +14,28 @@ nav li {
 nav li:hover {
     background-color: lightgreen;
 }
-header h1 {
+.header h1 {
+    position: relative;
+    bottom: 10px;
     display: inline;
-    background-color: white;
+    background-color: lightgreen;
     color: black;
     border-radius: 4px;
-    box-shadow: 4px 4px;
+    box-shadow: 4px 4px grey;
 };
 .block {
     display: flex;
     flex-direction: column;
+}
+.post{
+    background-color: lightgreen;
+    border: 2px black solid;
+}
+.postHeader {
+    background-color: black;
+    color: white;
+}
+.postDate {
+    display: flex;
+    align-items: flex-end;
 }
