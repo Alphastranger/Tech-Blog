@@ -1,4 +1,4 @@
-mainPage {
+.mainPage {
     background-color: white;
 }
 header {
@@ -21,7 +21,7 @@ header h1 {
     border-radius: 4px;
     box-shadow: 4px 4px;
 };
-block {
+.block {
     display: flex;
     flex-direction: column;
 }
