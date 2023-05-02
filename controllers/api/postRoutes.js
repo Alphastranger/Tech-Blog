@@ -2,28 +2,6 @@ const router = require('express').Router();
 const { Post, User } = require('../../models');
 const { sequelize } = require('../../models/user');
 
-router.get('/', async (req, res)=>{
-    try {
-        const homePage = await Post.findAll({
-            include: [{model: User}],
-            attributes: {
-                include: [
-                    [
-                        sequelize.literal(
-                            '(SELECT name From User WHERE Post_id = User.id'
-                        )
-                    ]
-                ]
-            }
-        })
-        const posts = homePage.map((post)=>
-        post.get({plain: true}))
-        res.render('homepage', {posts})
-        res.status(200).json(homePage)
-    } catch (err){
-        res.status(500).json(err)
-    }
-})
 router.post('/', async (req, res)=>{
     try {
         const newPost = await Post.create({
