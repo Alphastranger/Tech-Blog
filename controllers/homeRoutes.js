@@ -18,7 +18,7 @@ router.get('/', async (req, res)=>{
         const posts = homePage.map((post)=>
         post.get({plain: true}))
         res.render('homepage', {posts, logged_in:req.session.logged_in})
-        res.status(200).json(homePage)
+        // res.status(200).json(homePage)
     } catch (err){
         res.status(500).json(err)
     }
