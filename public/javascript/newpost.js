@@ -4,7 +4,7 @@ const submissionForm = async (event)=> {
     const title = document.querySelector('#title').value
     const post_text = document.querySelector('#post').value
     if (title && post_text) {
-        const response = await fetch('/', {
+        const response = await fetch('/api', {
             method:'POST',
             body: JSON.stringify({title, post_text}),
             headers: {'Content-Type': 'application/json'},
