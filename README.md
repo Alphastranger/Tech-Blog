@@ -12,6 +12,6 @@ working with handlebars to create a decent looking webpage.
 Most of my efforts with the routes were a struggle, but after much effort
 I got the webpage to load.
 
-[link]()
+[link](https://infinite-journey-41929.herokuapp.com/)
 
 ![alt text](./public/images/screenshot.png)
