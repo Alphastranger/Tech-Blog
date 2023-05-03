@@ -67,3 +67,8 @@ nav li:hover {
     display: flex;
     width: 200px;
 }
+#logout{
+    background: transparent;
+    border: none !important;
+    color: white;
+}

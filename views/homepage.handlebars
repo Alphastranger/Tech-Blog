@@ -1,5 +1,6 @@
 <div class="postPage">
-    {{!-- {{#if loggedIn}} --}}
+    <div></div>
+    {{#if logged_in}}
     <div class="submission">
     <form class="postForm">
         <label for="post">Make a new post!</label><br>
@@ -9,9 +10,9 @@
         <input type="submit" id= "submitbutton" value="submit">
     </form>
     </div>
-    {{!-- {{else}} --}}
-        {{!-- <h2>To leave a new blogpost, please log in!</h2>
-        {{/if}} --}}
+    {{else}}
+        <h2>To leave a new blogpost, please log in!</h2>
+        {{/if}}
     <section class="block">
         {{#each posts as |post|}}
         {{> post}}
