@@ -11,16 +11,10 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_USER,
     process.env.DB_PASSWORD,
     {
-      host: 'process.env.DATABASE_URL',
+      host: 'localhost',
       dialect: 'mysql',
       port: 3306
-    },
-    {dialectOptions: {
-      ssl: {
-        require:true,
-        rejectUnauthorized: false
-      }
-    }}
+    }
   );
 }
 sequelize
